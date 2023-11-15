@@ -1,0 +1,176 @@
+@charset "UTF-8";
+main {
+  display: grid;
+  grid-template-areas: "head" "content";
+  grid-template-rows: 100px auto;
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid black;
+  overflow: auto; /* Lägg till overflow för att hantera överflödigt innehåll */
+}
+
+body {
+  background-image: url("/media/bio.jpg"); /* Ange sökvägen till din bild */
+  background-size: cover; /* Använd cover för att täcka hela elementet */
+  background-position: center; /* Centrera bakgrundsbilden */
+  background-repeat: no-repeat;
+}
+
+header {
+  margin: 0;
+  grid-area: head;
+  display: flex;
+  flex-direction: column; /* Arrangera elementen i en kolumn */
+  justify-content: center; /* Centrera vertikalt */
+  align-items: center; /* Centrera horisontellt */
+  background-color: rgba(51, 51, 51, 0.2470588235); /* Exempel på bakgrundsfärg */
+  color: white; /* Exempel på textfärg */
+}
+
+article {
+  grid-area: content;
+  overflow: auto; /* Lägg till overflow för att hantera överflödigt innehåll */
+  min-height: 0; /* Återställ min-height för att tillåta krympning */
+  min-width: 0; /* Återställ min-width för att tillåta krympning */
+  text-align: center;
+  color: white;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.data-table th, .data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.data-table th {
+  background-color: #000000;
+}
+.data-table td:nth-child(2),
+.data-table td:nth-child(3),
+.data-table td:nth-child(4) {
+  text-align: center;
+}
+.data-table td {
+  color: #b5afaf;
+}
+
+.delete-icon {
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.delete-icon:hover {
+  color: #990000;
+}
+
+.alert {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+h2 {
+  margin-top: 30px;
+  color: rgb(248, 248, 252);
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  min-width: 300px;
+  max-width: 100%;
+  padding: 2%;
+  padding-right: 2%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.input-group {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+input, textarea {
+  width: auto;
+  padding: 5px;
+  outline: 0;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 18px;
+}
+
+label {
+  height: 100%;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  padding: 0px;
+  color: #800303;
+  cursor: text;
+  transition: 0.2s;
+  font-size: 24px;
+}
+label i {
+  color: white;
+}
+
+button {
+  padding: 10px 0;
+  color: #fff;
+  outline: none;
+  background: transparent;
+  border: 1px solid #fff;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 5%;
+  font-size: 18px;
+}
+
+#resultat {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+#resultat p {
+  font-size: 18px;
+  color: #fff;
+  margin: 5px 0;
+}
+#resultat strong {
+  font-weight: bold;
+  color: #f2e6b7;
+}/*# sourceMappingURL=styles.css.map */

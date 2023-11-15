@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <header> 
+            <h1>Välkommen till oss</h1>       
+        </header>
+        <article>
+            <h2>Den statliga televisionskanalen (STK)</h2>
+            <section class="hero">
+                <h3>Sök här:</h3> 
+                <form method="post" action="process_form.php">
+                    <div class="input-group">
+                        <input type="text" id="namnInput" placeholder="Titel på tv program" title="Ange titel på tv-program">
+                        <input type="text" id="dataInput" placeholder="Kategorier" title="Ange kategorier för tv-programmet">
+                        <input type="text" id="ageInput" placeholder="Åldersgräns" title="Ange åldersgräns för tv-programmet">
+                        <button type="button" onclick="sparaData()" title="Spara tv-program">Spara</button>
+                        <input type="text" id="searchInput" placeholder="Sök..." title="Sök efter tv-program">
+                        <button type="button" onclick="sokData()" title="Sök">Sök</button>
+                        <button type="button" onclick="visaAllaData()" title="Visa alla data">Visa alla Data</button>
+                        <button type="button" onclick="rensaData()" title="Rensa data">Rensa Data</button>
+                    </div>
+                    <div id="resultat">
+                        <table class="data-table"></table>
+                    </div>
+                </form>
+            </section>
+            
+            <div id="alertContainer"></div>
+        <script src="script.js"></script>
+        </article>
+    </main>
+</body>
+</html>
